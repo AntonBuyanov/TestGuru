@@ -33,20 +33,30 @@ tests = Test.create!([
 
 questions = Question.create!([
                                { body: 'Вопрос 1', test_id: tests[0].id},
+                               { body: 'Вопрос 2', test_id: tests[0].id},
+                               { body: 'Вопрос 1', test_id: tests[1].id},
                                { body: 'Вопрос 2', test_id: tests[1].id},
-                               { body: 'Вопрос 3', test_id: tests[2].id}
+                               { body: 'Вопрос 1', test_id: tests[2].id},
+                               { body: 'Вопрос 2', test_id: tests[2].id},
                              ])
 
 Answer.create!([
-                 { body: 'Вариант 1 вопрос 1', question_id: questions[0].id, correct: false },
-                 { body: 'Вариант 2 вопрос 1', question_id: questions[0].id, correct: true },
-                 { body: 'Вариант 1 вопрос 2', question_id: questions[1].id, correct: false },
-                 { body: 'Вариант 2 вопрос 2', question_id: questions[1].id, correct: true },
-                 { body: 'Вариант 1 вопрос 3', question_id: questions[2].id, correct: true },
-                 { body: 'Вариант 2 вопрос 3', question_id: questions[2].id, correct: false }
+                 { body: 'Ответ 1', question_id: questions[0].id, correct: false },
+                 { body: 'Ответ 2', question_id: questions[0].id, correct: true },
+                 { body: 'Ответ 3', question_id: questions[0].id, correct: false },
+                 { body: 'Ответ 1', question_id: questions[1].id, correct: true },
+                 { body: 'Ответ 2', question_id: questions[1].id, correct: false },
+                 { body: 'Ответ 3', question_id: questions[1].id, correct: false },
+                 { body: 'Ответ 1', question_id: questions[2].id, correct: false },
+                 { body: 'Ответ 2', question_id: questions[2].id, correct: false },
+                 { body: 'Ответ 3', question_id: questions[2].id, correct: true },
+                 { body: 'Ответ 1', question_id: questions[3].id, correct: true },
+                 { body: 'Ответ 2', question_id: questions[3].id, correct: false },
+                 { body: 'Ответ 3', question_id: questions[3].id, correct: false },
+                 { body: 'Ответ 1', question_id: questions[4].id, correct: false },
+                 { body: 'Ответ 2', question_id: questions[4].id, correct: true },
+                 { body: 'Ответ 3', question_id: questions[4].id, correct: false },
+                 { body: 'Ответ 1', question_id: questions[5].id, correct: false },
+                 { body: 'Ответ 2', question_id: questions[5].id, correct: true },
+                 { body: 'Ответ 3', question_id: questions[5].id, correct: false }
                ])
-
-UserPassedTest.create!([
-                         { user_id: users[0].id, test_id: tests[1].id },
-                         { user_id: users[1].id, test_id: tests[0].id }
-                       ])

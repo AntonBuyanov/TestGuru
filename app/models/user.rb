@@ -1,6 +1,7 @@
 class User < ApplicationRecord
+  has_many :tests
 
   def level_test(level)
-    Test.where(user_passed_test: { user_id: user_id, level: level})
+    tests.where(level: level)
   end
 end
