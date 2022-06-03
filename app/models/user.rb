@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  has_many :tests
 
   def level_test(level)
-    tests.where(level: level)
+    Test.joins('JOIN user_passed_tests ON tests.id = user_passed_tests.test_id')
+      .where('user_passed_tests.user_id = ? AND tests.level = ?', id, level)
   end
 end
