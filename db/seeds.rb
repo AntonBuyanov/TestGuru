@@ -26,37 +26,37 @@ categories = Category.create!([
                      ])
 
 tests = Test.create!([
-                       { title: 'Ruby', level: 3, category_id: categories[1].id, author_id: users[0].id },
-                       { title: 'Python', level: 2, category_id: categories[0].id, author_id: users[1].id },
-                       { title: 'JavaScript', level: 1, category_id: categories[0].id, author_id: users[2].id }
+                       { title: 'Ruby', level: 3, category: categories[1], author: users[0] },
+                       { title: 'Python', level: 2, category: categories[0], author: users[1] },
+                       { title: 'JavaScript', level: 1, category: categories[0], author: users[2] }
                      ])
 
 questions = Question.create!([
-                               { body: 'Вопрос 1', test_id: tests[0].id},
-                               { body: 'Вопрос 2', test_id: tests[0].id},
-                               { body: 'Вопрос 1', test_id: tests[1].id},
-                               { body: 'Вопрос 2', test_id: tests[1].id},
-                               { body: 'Вопрос 1', test_id: tests[2].id},
-                               { body: 'Вопрос 2', test_id: tests[2].id},
+                               { body: 'Вопрос 1', test: tests[0]},
+                               { body: 'Вопрос 2', test: tests[0]},
+                               { body: 'Вопрос 1', test: tests[1]},
+                               { body: 'Вопрос 2', test: tests[1]},
+                               { body: 'Вопрос 1', test: tests[2]},
+                               { body: 'Вопрос 2', test: tests[2]},
                              ])
 
 Answer.create!([
-                 { body: 'Ответ 1', question_id: questions[0].id, correct: false },
-                 { body: 'Ответ 2', question_id: questions[0].id, correct: true },
-                 { body: 'Ответ 3', question_id: questions[0].id, correct: false },
-                 { body: 'Ответ 1', question_id: questions[1].id, correct: true },
-                 { body: 'Ответ 2', question_id: questions[1].id, correct: false },
-                 { body: 'Ответ 3', question_id: questions[1].id, correct: false },
-                 { body: 'Ответ 1', question_id: questions[2].id, correct: false },
-                 { body: 'Ответ 2', question_id: questions[2].id, correct: false },
-                 { body: 'Ответ 3', question_id: questions[2].id, correct: true },
-                 { body: 'Ответ 1', question_id: questions[3].id, correct: true },
-                 { body: 'Ответ 2', question_id: questions[3].id, correct: false },
-                 { body: 'Ответ 3', question_id: questions[3].id, correct: false },
-                 { body: 'Ответ 1', question_id: questions[4].id, correct: false },
-                 { body: 'Ответ 2', question_id: questions[4].id, correct: true },
-                 { body: 'Ответ 3', question_id: questions[4].id, correct: false },
-                 { body: 'Ответ 1', question_id: questions[5].id, correct: false },
-                 { body: 'Ответ 2', question_id: questions[5].id, correct: true },
-                 { body: 'Ответ 3', question_id: questions[5].id, correct: false }
+                 { body: 'Ответ 1', question: questions[0], correct: false },
+                 { body: 'Ответ 2', question: questions[0], correct: true },
+                 { body: 'Ответ 3', question: questions[0], correct: false },
+                 { body: 'Ответ 1', question: questions[1], correct: true },
+                 { body: 'Ответ 2', question: questions[1], correct: false },
+                 { body: 'Ответ 3', question: questions[1], correct: false },
+                 { body: 'Ответ 1', question: questions[2], correct: false },
+                 { body: 'Ответ 2', question: questions[2], correct: false },
+                 { body: 'Ответ 3', question: questions[2], correct: true },
+                 { body: 'Ответ 1', question: questions[3], correct: true },
+                 { body: 'Ответ 2', question: questions[3], correct: false },
+                 { body: 'Ответ 3', question: questions[3], correct: false },
+                 { body: 'Ответ 1', question: questions[4], correct: false },
+                 { body: 'Ответ 2', question: questions[4], correct: true },
+                 { body: 'Ответ 3', question: questions[4], correct: false },
+                 { body: 'Ответ 1', question: questions[5], correct: false },
+                 { body: 'Ответ 2', question: questions[5], correct: true },
+                 { body: 'Ответ 3', question: questions[5], correct: false }
                ])
