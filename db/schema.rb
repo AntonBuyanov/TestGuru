@@ -47,11 +47,13 @@ ActiveRecord::Schema.define(version: 2022_06_01_145632) do
   end
 
   create_table "user_passed_tests", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "test_id"
+    t.boolean "passed", default: false, null: false
+    t.integer "user_id", null: false
+    t.integer "test_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["test_id"], name: "index_user_passed_tests_on_test_id"
+    t.index ["user_id", "test_id"], name: "index_user_passed_tests_on_user_id_and_test_id", unique: true
     t.index ["user_id"], name: "index_user_passed_tests_on_user_id"
   end
 
