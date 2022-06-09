@@ -11,7 +11,8 @@ class Test < ApplicationRecord
   scope :hard_level, -> { where(level: 5..Float::INFINITY) }
 
   validates :title, presence: true,
-            uniqueness: true
+            uniqueness: { scope: :level,
+                          message: 'title and level must be unique'}
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 },
             uniqueness: true
 
