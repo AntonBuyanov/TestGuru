@@ -8,10 +8,27 @@
   <%= @test.level %>
 </p>
 
-<p>
-  <strong>Questions:</strong>
-  <%= @test.questions.pluck(:body) %>
-</p>
-
 <%= link_to 'Edit', edit_test_path(@test) %>
 <%= link_to 'Back', tests_path %>
+
+<p>
+  <table>
+    <tr>
+      <th>Questions</th>
+      <th colspan="2">Actions</th>
+    </tr>
+    <% @test.questions.each do |test| %>
+    <tr>
+      <td><%= test.body%></td>
+      <td><%= link_to 'Edit', edit_question_path(test) %></td>
+      <td>
+        <%= link_to 'Delete',
+                    question_path(test),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' }%>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</p>
+
