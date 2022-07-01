@@ -5,12 +5,6 @@ class QuestionsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-    result = @test.questions.pluck(:body)
-
-    render plain: result.join("\n")
-  end
-
   def show
     render plain: @question.body
   end
@@ -20,7 +14,7 @@ class QuestionsController < ApplicationController
   end
 
   def edit
-    @question = Question.find(params[:id])
+    find_question
   end
 
   def create
