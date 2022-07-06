@@ -13,8 +13,7 @@ class Test < ApplicationRecord
   validates :title, presence: true,
             uniqueness: { scope: :level,
                           message: 'title and level must be unique'}
-  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 },
-            uniqueness: true
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def self.find_test_by_category(name_category)
     joins(:category)
