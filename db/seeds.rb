@@ -11,7 +11,7 @@ Category.destroy_all
 Answer.destroy_all
 Question.destroy_all
 Test.destroy_all
-UserPassedTest.destroy_all
+TestPassage.destroy_all
 
 users = User.create!([
                        { name: 'Антон', email: 'buianoff-anton@yandex.ru' },
