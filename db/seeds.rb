@@ -14,9 +14,9 @@ Test.destroy_all
 TestPassage.destroy_all
 
 users = User.create!([
-                       { name: 'Антон', email: 'buianoff-anton@yandex.ru' },
-                       { name: 'Юрий', email: 'uri_dev@mail.ru' },
-                       { name: 'Петр', email: 'petr_sidorov@mail.ru' }
+                       { name: 'Антон', email: 'buianoff-anton@yandex.ru', password: '123' },
+                       { name: 'Юрий', email: 'uri_dev@mail.ru', password: '123' },
+                       { name: 'Петр', email: 'petr_sidorov@mail.ru', password: '123' }
                      ])
 
 categories = Category.create!([
