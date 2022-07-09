@@ -1,6 +1,6 @@
 <% if logged_in? %>
   <p class="nav_user">Welcome, <b><%= current_user.name %></b> <%= link_to 'Guru', tests_path %><br>
-    <%= link_to 'Exit', logout_path %>
+    <%= link_to 'Exit', logout_path, method: :delete %>
   </p>
 <% else %>
   <p class="nav_user"><%= link_to 'Register', signup_path %><br>
