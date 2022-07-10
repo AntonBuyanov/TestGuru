@@ -1,9 +1,16 @@
 class User < ApplicationRecord
+
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :author_test, class_name: 'Test'
 
-  validates :email, presence: true
+  has_secure_password
+
+  validates :name,  presence: true, length: { maximum: 50 }
+  VALID_EMAIL = URI::MailTo::EMAIL_REGEXP
+  validates :email, presence: true, length: { maximum: 255 },
+            format: { with: VALID_EMAIL },
+            uniqueness: true
 
   def level_test(level)
     tests.where(level: level)
