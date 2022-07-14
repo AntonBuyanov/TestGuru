@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   has_many :test_passages
   has_many :tests, through: :test_passages
-  has_many :author_test, class_name: 'Test'
+  has_many :author_test, class_name: 'Test', foreign_key: :author_id
 
   validates :name,  presence: true, length: { maximum: 50 }
   VALID_EMAIL = URI::MailTo::EMAIL_REGEXP

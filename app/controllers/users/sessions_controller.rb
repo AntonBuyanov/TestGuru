@@ -1,7 +1,7 @@
 class Users::SessionsController < Devise::SessionsController
-  after_action :custom_welcome, only: %i[create]
 
-  def custom_welcome
-    flash.notice = "Welcome #{current_user.name}." if flash.key?(:notice)
+  def create
+    super
+    flash[:notice] = "Welcome, #{current_user.name}"
   end
 end
