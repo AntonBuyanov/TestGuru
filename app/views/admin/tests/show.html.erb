@@ -1,36 +1,36 @@
 <p>
-  <strong>Title:</strong>
+  <strong><%= t('.title') %></strong>
   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Level:</strong>
+  <strong><%= t('.level') %></strong>
   <%= @test.level %>
 </p>
 
 <p>
-  <%= link_to 'New question', new_admin_test_question_path(@test) %>
+  <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
 </p>
 
-<%= link_to 'Edit', edit_admin_test_path(@test) %>
-<%= link_to 'Back', admin_tests_path %>
+<%= link_to t('admin.tests.test.edit'), edit_admin_test_path(@test) %>
+<%= link_to t('.back'), admin_tests_path %>
 
 <p>
   <table>
     <tr>
-      <th>Questions</th>
-      <th colspan="3">Actions</th>
+      <th><%= t('.questions') %></th>
+      <th colspan="3"><%= t('.actions') %></th>
     </tr>
     <% @test.questions.each do |test| %>
     <tr>
       <td><%= test.body%></td>
-      <td><%= link_to 'Show', admin_question_path(test) %></td>
-      <td><%= link_to 'Edit', edit_admin_question_path(test) %></td>
+      <td><%= link_to t('.show'), admin_question_path(test) %></td>
+      <td><%= link_to t('.edit'), edit_admin_question_path(test) %></td>
       <td>
-        <%= link_to 'Delete',
+        <%= link_to t('.delete'),
                     question_path(test),
                     method: :delete,
-                    data: { confirm: 'Are you sure?' }%>
+                    data: { confirm: t('.sure') }%>
       </td>
     </tr>
     <% end %>

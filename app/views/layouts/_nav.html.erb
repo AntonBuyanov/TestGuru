@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <p class="nav_user">Welcome, <b><%= current_user.name %></b> <%= link_to 'Guru', tests_path %><br>
+  <p class="nav_user"><%= t('.header') %><b><%= current_user.name %></b>!<br><%= link_to 'Guru', tests_path %><br>
     <%= link_to 'Exit', destroy_user_session_path, method: :delete %>
   </p>
 <% else %>
