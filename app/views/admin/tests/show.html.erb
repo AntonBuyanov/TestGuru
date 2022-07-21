@@ -16,19 +16,19 @@
 <%= link_to t('.back'), admin_tests_path %>
 
 <p>
-  <table>
+  <table class="table table-striped table-sm">
     <tr>
       <th><%= t('.questions') %></th>
       <th colspan="3"><%= t('.actions') %></th>
     </tr>
     <% @test.questions.each do |test| %>
     <tr>
-      <td><%= test.body%></td>
-      <td><%= link_to t('.show'), admin_question_path(test) %></td>
-      <td><%= link_to t('.edit'), edit_admin_question_path(test) %></td>
+      <td><%= test.body %></td>
+      <td><%= link_to t('.show'), admin_question_path(test), class: 'btn btn-outline-primary btn-sm' %></td>
+      <td><%= link_to t('.edit'), edit_admin_question_path(test), class: 'btn btn-outline-primary btn-sm' %></td>
       <td>
         <%= link_to t('.delete'),
-                    question_path(test),
+                    question_path(test), class: 'btn btn-outline-primary btn-sm',
                     method: :delete,
                     data: { confirm: t('.sure') }%>
       </td>

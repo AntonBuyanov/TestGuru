@@ -26,6 +26,11 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    nav:
+      welcome: "Welcome, "
+      logout: "Logout"
+      login: "Log in"
+      signup: "Sign up"
 
   tests:
     index:
@@ -41,6 +46,8 @@ en:
     result:
       header: "The %{title} Test was Completed!"
     show:
+      passage: "Passing"
+      test: "test"
       next: "Next"
 
   admin:
@@ -75,6 +82,8 @@ en:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
+      form:
+        new_test: "Create test"
     questions:
       new:
         new_question: "New Question"
@@ -85,6 +94,9 @@ en:
         new_answer: "New answer"
         edit: "Edit"
         back: "Back"
+        action: "Actions"
+      edit:
+        edit: "Edit "
       question:
         show: "Show"
         edit: "Edit"
@@ -94,6 +106,8 @@ en:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
+        answers: "Answers"
+        actions: "Actions"
       edit:
         edit_answer: "Edit Answer"
         back: "Back"
@@ -107,7 +121,7 @@ en:
     nav:
       header: "Welcome, "
       logout: "Logout"
-      admin_panel: "TestGuru Admin Panel"
+      admin_panel: "Admin Panel"
 
   tests_mailer:
     completed_test:
