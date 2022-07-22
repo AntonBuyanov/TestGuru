@@ -1,20 +1,25 @@
-<%= form_with model: [:admin, @test], local: true do |form| %>
-  <%= render 'shared/errors', resource: @test %>
+<div class="card">
+  <div class="card-body">
+    <%= form_with model: [:admin, @test], local: true do |form| %>
+      <%= render 'shared/errors', resource: @test %>
+    <div clas="form-group">
+      <p>
+        <%= form.label :title %><br>
+        <%= form.text_field :title, id: :test_title, class: 'form-control' %>
+      </p>
 
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title, id: :test_title %>
-  </p>
+      <p>
+        <%= form.label :level %><br>
+        <%= form.number_field :level, id: :test_level, class: 'form-control' %>
+      </p>
 
-  <p>
-    <%= form.label :level %><br>
-    <%= form.number_field :level, id: :test_level %>
-  </p>
+      <p>
+        <%= form.label :category_id %>
+        <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
+      </p>
 
-  <p>
-    <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
-  </p>
-
-  <p><%= form.submit %></p>
-<% end %>
+      <p><%= form.submit t('.new_test'), class: 'btn btn-outline-dark' %></p>
+    <% end %>
+    </div>
+  </div>
+</div>

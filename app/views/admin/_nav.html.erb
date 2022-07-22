@@ -1,7 +1,14 @@
-<div class="nav nav-admin">
-  <span class="nav-admin title"><%= t('.admin_panel') %></span>
-  <div class="nav-admin user">
-    <%= t('.header') %> <b class="nav-admin user-email"><%= current_user.email %>!</b> Guru |
-    <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+<nav class="navbar" style="background-color: #938cef;">
+  <div class="container-fluid">
+    <span class="navbar-text">
+      <%= link_to 'TestGuru', root_path%> <%= t('.admin_panel') %>
+    </span>
+    <div class="nav-admin user">
+      <% if current_user.is_a?(Admin) %>
+        <span class="badge rounded-pill text-bg-info"><%= link_to 'Adminpanel', admin_tests_path %></span>
+      <% end %>
+      <%= t('.header') %> <b class="nav-admin user-email"><%= current_user.email %>!</b> Guru |
+      <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+    </div>
   </div>
-</div>
+</nav>

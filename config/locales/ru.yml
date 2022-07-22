@@ -12,10 +12,6 @@ ru:
         level: "Уровень"
         category_id: "Категория"
 
-  layouts:
-    nav:
-      header: "Добро пожаловать, "
-
   users:
     sessions:
       create:
@@ -28,6 +24,11 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    nav:
+      welcome: "Добро пожаловать, "
+      logout: "Выйти"
+      login: "Авторизация"
+      signup: "Регистрация"
 
   tests:
     index:
@@ -43,6 +44,8 @@ ru:
     result:
       header: "Тест %{title} успешно пройден!"
     show:
+      passage: "Прохождение"
+      test: "теста"
       next: "Следующий вопрос"
 
   admin:
@@ -77,6 +80,8 @@ ru:
         show: "Просмотреть"
         edit: "Редактировать"
         delete: "Удалить"
+      form:
+        new_test: "Создать тест"
     questions:
       new:
         new_question: "Создание вопроса"
@@ -87,6 +92,9 @@ ru:
         new_answer: "Создать ответ"
         edit: "Редактировать"
         back: "Назад"
+        actions: "Действия"
+      edit:
+        edit: "Редактировать "
       question:
         show: "Просмотреть"
         edit: "Редактировать"
@@ -96,6 +104,8 @@ ru:
         show: "Просмотреть"
         edit: "Редактировать"
         delete: "Удалить"
+        answers: "Ответы"
+        actions: "Действия"
       edit:
         edit_answer: "Редактирование ответа"
         back: "Назад"
@@ -109,7 +119,7 @@ ru:
     nav:
       header: "Добро пожаловать, "
       logout: "Выйти"
-      admin_panel: "TestGuru Админ Панель"
+      admin_panel: "Админ Панель"
 
   tests_mailer:
     completed_test:

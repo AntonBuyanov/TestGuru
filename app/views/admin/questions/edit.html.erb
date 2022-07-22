@@ -1,5 +1,9 @@
-<h1> <%= question_header(@question) %> </h1>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <h1> <%= t('.edit') %><%= @question.body %> </h1>
 
-<%= render 'form' %>
+    <%= render 'form' %>
 
-<%= link_to 'Back', admin_test_path(@question.test) %>
+    <%= link_to 'Back', admin_test_path(@question.test) %>
+  </div>
+</div>
