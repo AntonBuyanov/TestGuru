@@ -49,6 +49,10 @@ en:
       passage: "Passing"
       test: "test"
       next: "Next"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist"
+
 
   admin:
     tests:
@@ -131,3 +135,7 @@ en:
     Backend: "Backend"
     Frontend: "Frontend"
     Machine Learning: "Machine Learning"
+
+  services:
+    gist_question_service:
+      description: "Question about %{question} from TestGuru"
