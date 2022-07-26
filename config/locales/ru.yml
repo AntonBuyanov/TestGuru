@@ -47,7 +47,9 @@ ru:
       passage: "Прохождение"
       test: "теста"
       next: "Следующий вопрос"
-    gist:
+
+  gists:
+    create:
       success: "Gist успешно сохранен! %{url}"
       failure: "Во время сохранения gist произошла ошибка"
 

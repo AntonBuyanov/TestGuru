@@ -49,8 +49,10 @@ en:
       passage: "Passing"
       test: "test"
       next: "Next"
-    gist:
-      success: "Gist was successfully created!"
+
+  gists:
+    create:
+      success: "Gist was successfully created! %{url}"
       failure: "An error occurred while saving gist"
 
 
