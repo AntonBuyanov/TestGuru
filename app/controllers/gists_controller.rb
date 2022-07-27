@@ -8,7 +8,7 @@ class GistsController < ApplicationController
     if result.success?
       current_user.gists.create(question: @test_passage.current_question, url: result.gist_url)
 
-      flash_options = { notice: t('.success', url: helpers.link_to("https://gist.github.com", result.gist_url)) }
+      flash_options = { notice: t('.success', url_html: helpers.link_to(result.gist_url, result.gist_url, target: '_blank').html_safe) }
     else
       flash_options = { alert: t('.failure') }
     end

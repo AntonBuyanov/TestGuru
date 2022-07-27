@@ -91,7 +91,6 @@ ActiveRecord::Schema.define(version: 2022_07_25_061322) do
     t.string "last_name"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["name"], name: "index_users_on_name"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["type"], name: "index_users_on_type"
   end

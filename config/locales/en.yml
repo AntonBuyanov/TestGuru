@@ -52,7 +52,7 @@ en:
 
   gists:
     create:
-      success: "Gist was successfully created! %{url}"
+      success: "Gist was successfully created! %{html_url}"
       failure: "An error occurred while saving gist"
 
 

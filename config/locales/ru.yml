@@ -50,7 +50,7 @@ ru:
 
   gists:
     create:
-      success: "Gist успешно сохранен! %{url}"
+      success: "Gist успешно сохранен! %{url_html}"
       failure: "Во время сохранения gist произошла ошибка"
 
   admin:
