@@ -9,13 +9,13 @@ class GistQuestionService
 
   def call
     result = @client.create_gist(gist_params)
-    Object.new(result.url.present?, result.id)
+    Object.new(result.url.present?, result.url)
   end
 
   private
 
   def default_client
-    Octokit::Client.new(access_token: ENV['GITHUB_ACCESS_TOKEN'])
+    Octokit::Client.new(access_token: ENV.fetch('GITHUB_ACCESS_TOKEN'))
   end
 
   def gist_params

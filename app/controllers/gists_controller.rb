@@ -1,19 +1,14 @@
 class GistsController < ApplicationController
 
-  before_action :find_test_passage, only: %i[new create]
-
-  def new
-    @gist = Gist.new
-  end
+  before_action :find_test_passage, only: :create
 
   def create
     result = GistQuestionService.new(@test_passage.current_question).call
 
     if result.success?
-      gist_url_tag = %(<a href="#{result.gist_url}" target="_blank">gist.github.com</a>)
-      current_user.gists.create(question: @test_passage.current_question,
-                                url: result.gist_url)
-      flash_options = { notice: t('.success', url: gist_url_tag) }
+      current_user.gists.create(question: @test_passage.current_question, url: result.gist_url)
+
+      flash_options = { notice: t('.success', url: helpers.link_to("https://gist.github.com", result.gist_url)) }
     else
       flash_options = { alert: t('.failure') }
     end
