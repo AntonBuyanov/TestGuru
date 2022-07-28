@@ -19,7 +19,9 @@ Rails.application.routes.draw do
     member do
       get :result
     end
+    resources :gists, only: %i[new create], shallow: true
   end
+
 
   namespace :admin do
     resources :tests do
@@ -27,5 +29,6 @@ Rails.application.routes.draw do
         resources :answers, except: :index, shallow: true
       end
     end
+    resources :gists, only: :index
   end
 end

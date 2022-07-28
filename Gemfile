@@ -22,10 +22,18 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# AUTH
+
 gem 'devise', '~> 4.0'
 
-gem 'rails-i18n'
+# NETWORKING
 
+gem 'octokit', '~> 4.0'
+gem 'faraday-retry'
+
+# LOCALIZATION
+
+gem 'rails-i18n'
 
 # UI
 
@@ -54,6 +62,8 @@ group :development do
   gem 'spring'
 
   gem 'letter_opener'
+
+  gem 'dotenv-rails'
 end
 
 group :test do

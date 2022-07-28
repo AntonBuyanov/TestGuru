@@ -48,6 +48,11 @@ ru:
       test: "теста"
       next: "Следующий вопрос"
 
+  gists:
+    create:
+      success: "Gist успешно сохранен! %{url_html}"
+      failure: "Во время сохранения gist произошла ошибка"
+
   admin:
     tests:
       create:
@@ -116,6 +121,13 @@ ru:
         answer: "Ответ:"
         correct: "Корректность:"
         back: "Назад"
+    gists:
+      index:
+        header: "Gist пользователей"
+        question: "Вопрос"
+        url: "URL"
+        user: "Пользователь"
+
     nav:
       header: "Добро пожаловать, "
       logout: "Выйти"
@@ -129,3 +141,8 @@ ru:
     Backend: "Backend"
     Frontend: "Frontend"
     Machine Learning: "Машинное обучение"
+
+  services:
+    gist_question_service:
+      description: "Вопрос о %{question} от TestGuru"
+
