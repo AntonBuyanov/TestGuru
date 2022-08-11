@@ -9,8 +9,8 @@ class GistQuestionService
 
   def call
     response = @client.create_gist(gist_params)
-    html_url = @client.last_response.data[:html_url]
-    Object.new(response.url.present?, html_url)
+    response_html_url = @client.last_response.data[:html_url]
+    Object.new(response.url.present?, response_html_url)
   end
 
   private

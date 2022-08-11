@@ -18,14 +18,15 @@
             </p>
 
             <p>
-              <%= f.label :password %>
-              <% if @minimum_password_length %>
-                <em>(<%= @minimum_password_length %><%= t('.symbols') %>)</em>
-              <% end %><br />
-              <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
-
-              <%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+                <%= f.label :password %>
+                <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %><%= t('.symbols') %>)</em>
+                <% end %><br />
+                <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+                <%= f.label :password_confirmation %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+                <%= octicon 'check', class: 'text-success hide mt-2' %>
+                <%= octicon 'x', class: 'text-danger hide mt-2' %>
             </p>
 
             <%= f.submit t('.signup'), class: 'btn btn-primary' %>
