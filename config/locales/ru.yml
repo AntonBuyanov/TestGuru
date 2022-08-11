@@ -87,6 +87,8 @@ ru:
         delete: "Удалить"
       form:
         new_test: "Создать тест"
+      form_inline:
+        submit: "ОК"
     questions:
       new:
         new_question: "Создание вопроса"
@@ -127,7 +129,6 @@ ru:
         question: "Вопрос"
         url: "URL"
         user: "Пользователь"
-
     nav:
       header: "Добро пожаловать, "
       logout: "Выйти"

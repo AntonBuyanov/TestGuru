@@ -5,3 +5,4 @@ require("@rails/activestorage").start()
 import "bootstrap"
 import "../utilities/sorting"
 import "../utilities/check_password"
+import "../utilities/form_inline"
