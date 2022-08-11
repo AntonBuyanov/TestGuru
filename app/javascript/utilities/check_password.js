@@ -1,11 +1,11 @@
 document.addEventListener('turbolinks:load', () => {
-    var password = document.getElementById('user_password')
-    var passwordConfirmation = document.getElementById('user_password_confirmation')
+    const password = document.getElementById('user_password')
+    const passwordConfirmation = document.getElementById('user_password_confirmation')
 
-    var correctIcon = document.querySelector('.octicon-check')
-    var incorrectIcon = document.querySelector('.octicon-x')
+    const correctIcon = document.querySelector('.octicon-check')
+    const incorrectIcon = document.querySelector('.octicon-x')
 
-    var passwordCheck = () => {
+    const passwordCheck = () => {
         if (passwordConfirmation.value === '') {
             correctIcon.classList.add('hide')
             incorrectIcon.classList.add('hide')
