@@ -3,7 +3,7 @@
 
   <span class="navbar-text">
     <% if current_user.is_a?(Admin) %>
-        <span class="badge rounded-pill text-bg-info"><%= link_to 'Adminpanel', admin_tests_path %></span>
+        <span class="badge rounded-pill text-bg-info"><%= link_to 'AdminPanel', admin_tests_path %></span>
     <% end %>
     <% if user_signed_in? %>
       <%= t('.welcome') %> <b><%= current_user.email %></b> Guru |

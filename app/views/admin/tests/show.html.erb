@@ -28,7 +28,7 @@
       <td><%= link_to t('.edit'), edit_admin_question_path(test), class: 'btn btn-outline-primary btn-sm' %></td>
       <td>
         <%= link_to t('.delete'),
-                    question_path(test), class: 'btn btn-outline-primary btn-sm',
+                    admin_question_path(test), class: 'btn btn-outline-primary btn-sm',
                     method: :delete,
                     data: { confirm: t('.sure') }%>
       </td>

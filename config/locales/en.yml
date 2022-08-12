@@ -90,6 +90,8 @@ en:
         delete: "Delete"
       form:
         new_test: "Create test"
+      form_inline:
+        submit: "OK"
     questions:
       new:
         new_question: "New Question"

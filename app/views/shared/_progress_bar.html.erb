@@ -1,0 +1,9 @@
+<div class="progress">
+  <%= content_tag :div, "Your progress",
+                  class: "progress-bar progress-bar-striped progress-bar-animated bg-info",
+                  role: "progressbar",
+                  data: { question_number: @test_passage.current_question_number,
+                          question_count: @test_passage.question_count},
+                  'aria_valuemin': '0',
+                  'aria_valuemax': '100'%>
+</div>
