@@ -1,4 +1,5 @@
 <h1><%= t('.passage') %> <%= @test_passage.test.title %> <%= t('.test') %></h1>
+<%= render 'shared/progress_bar' %>
 <p>Вопрос <%=@test_passage.current_question_number %> из <%= @test_passage.question_count %></p>
 <p class="lead">
   <%= @test_passage.current_question.body %>
