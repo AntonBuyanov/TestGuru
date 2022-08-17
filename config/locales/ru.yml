@@ -97,11 +97,12 @@ ru:
         question: "вопрос"
         answers: "Список ответов:"
         new_answer: "Создать ответ"
-        edit: "Редактировать"
+        edit: "Редактировать вопрос"
         back: "Назад"
         actions: "Действия"
       edit:
-        edit: "Редактировать "
+        edit: "Редактировать вопрос"
+        back: "Назад"
       question:
         show: "Просмотреть"
         edit: "Редактировать"
@@ -121,8 +122,8 @@ ru:
       show:
         question: "Вопрос:"
         answer: "Ответ:"
-        correct: "Корректность:"
         back: "Назад"
+      correct: "Правильный"
     gists:
       index:
         header: "Gist пользователей"
