@@ -18,7 +18,6 @@ Rails.application.routes.draw do
     resources :gists, only: %i[new create], shallow: true
   end
 
-
   namespace :admin do
     resources :tests do
       patch :update_inline, on: :member

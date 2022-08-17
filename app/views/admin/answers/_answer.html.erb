@@ -1,15 +1,15 @@
-<p>
-<table class="table table-striped table-sm">
-  <tr>
-    <td><%= answer.body %></td>
-    <td><%= link_to t('.show'), admin_answer_path(answer), class: 'btn btn-outline-primary btn-sm' %></td>
-    <td><%= link_to t('.edit'), edit_admin_answer_path(answer), class: 'btn btn-outline-primary btn-sm' %></td>
-    <td>
-      <%= link_to t('.delete'),
-                    admin_answer_path(answer), class: 'btn btn-outline-primary btn-sm',
-                    method: :delete,
-                    data: { confirm: t('admin.tests.show.sure') }%>
-    </td>
-  </tr>
-</table>
-</p>
+<li>
+  <%= answer.body %>
+  <% if answer.correct? %>
+    ✓
+  <% end %>
+  <p>
+    <%= link_to t('.show'), admin_answer_path(answer), class: 'btn btn-outline-primary btn-sm' %>
+    <%= link_to t('.edit'), edit_admin_answer_path(answer), class: 'btn btn-outline-primary btn-sm' %>
+    <%= link_to t('.delete'),
+                admin_answer_path(answer), class: 'btn btn-outline-primary btn-sm',
+                method: :delete,
+                data: { confirm: t('admin.tests.show.sure') }%>
+  </p>
+</li>
+
