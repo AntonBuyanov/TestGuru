@@ -1,0 +1,29 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-6">
+    <h1 class="text-center ">Обратная связь</h1>
+
+    <div class="card border-primary mt-4 mb-4">
+      <div class="card-body">
+        <%= form_for @feedback do |form| %>
+          <%= render 'shared/errors', resource: @feedback %>
+
+          <div class="form-group">
+            <p>
+              <%= form.text_field :name, autofocus: true, class: 'form-control', placeholder: 'Ваше имя' %>
+            </p>
+
+            <p>
+              <%= form.text_field :email, class: 'form-control', placeholder: 'Email *' %>
+            </p>
+
+            <p>
+              <%= form.text_area :message, cols: 60, rows: 10, class: 'form-control', placeholder: 'Текст сообщения *' %>
+            </p>
+
+            <p><%= form.submit 'Отправить', class: "btn btn-outline-primary" %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

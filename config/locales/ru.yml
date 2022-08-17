@@ -27,8 +27,8 @@ ru:
     nav:
       welcome: "Добро пожаловать, "
       logout: "Выйти"
-      login: "Авторизация"
-      signup: "Регистрация"
+      login: "Войти"
+      signup: "Зарегистрироваться"
 
   tests:
     index:

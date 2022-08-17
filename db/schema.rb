@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_15_055354) do
+ActiveRecord::Schema.define(version: 2022_08_16_113433) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 2022_08_15_055354) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "feedbacks", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "gists", force: :cascade do |t|
     t.integer "user_id"
     t.integer "question_id"
@@ -37,7 +45,17 @@ ActiveRecord::Schema.define(version: 2022_08_15_055354) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["question_id"], name: "index_gists_on_question_id"
+    t.index ["user_id", "question_id"], name: "index_gists_on_user_id_and_question_id", unique: true
     t.index ["user_id"], name: "index_gists_on_user_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.string "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "questions", force: :cascade do |t|

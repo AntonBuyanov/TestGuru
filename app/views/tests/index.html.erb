@@ -1,15 +1,20 @@
-<h1><%= t('.header') %></h1>
-<table class="table table-striped table-sm">
-  <tr>
-    <th class="sort-by-title pointer">
-      <%= t('.title') %>
-      <%= octicon 'arrow-up', class: 'text-success hide' %>
-      <%= octicon 'arrow-down', class: 'text-success hide' %>
-    </th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.questions') %></th>
-    <th><%= t('.actions') %></th>
-  </tr>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-6">
+    <h1 class="text-center "><%= t('.header') %></h1>
 
-  <%= render @tests %>
-</table>
+    <table class="table table-striped table-hover table-sm mt-4 mb-4">
+      <tr>
+        <th class="sort-by-title pointer">
+          <%= t('.title') %>
+          <%= octicon 'arrow-up', class: 'text-success hide' %>
+          <%= octicon 'arrow-down', class: 'text-success hide' %>
+        </th>
+        <th><%= t('.level') %></th>
+        <th><%= t('.questions') %></th>
+        <th><%= t('.actions') %></th>
+      </tr>
+
+      <%= render @tests %>
+    </table>
+  </div>
+</div>
