@@ -1,9 +1,14 @@
-<%= form_with model: [:admin, @test, @question], local: true do |form| %>
-  <%= render 'shared/errors', resource: @question %>
+<div class="card">
+  <div class="card-body">
+    <%= form_with model: [:admin, @test, @question], local: true do |form| %>
+      <%= render 'shared/errors', resource: @question %>
+      <div class="form-group">
+      <p>
+        <%= form.text_field :body, id: :question_body, autofocus: true, class: 'form-control' %>
+      </p><br>
 
-  <p>
-    <%= form.text_field :body, id: :question_body, autofocus: true, class: 'form-control' %>
-  </p><br>
-
-  <p><%= form.submit class: 'btn btn-primary mt-1' %></p>
-<% end %>
+      <p><%= form.submit class: 'btn btn-primary mt-1' %></p>
+    <% end %>
+    </div>
+  </div>
+</div>
