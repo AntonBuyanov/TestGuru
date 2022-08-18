@@ -119,6 +119,7 @@ ru:
         back: "Назад"
       new:
         new_answer: "Создание ответа"
+        edit: "Назад"
       show:
         question: "Вопрос:"
         answer: "Ответ:"

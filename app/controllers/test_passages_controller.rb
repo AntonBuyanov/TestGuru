@@ -18,7 +18,6 @@ class TestPassagesController < ApplicationController
     end
   end
 
-
   private
 
   def set_test_passage
