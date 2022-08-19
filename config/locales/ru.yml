@@ -27,8 +27,8 @@ ru:
     nav:
       welcome: "Добро пожаловать, "
       logout: "Выйти"
-      login: "Авторизация"
-      signup: "Регистрация"
+      login: "Войти"
+      signup: "Зарегистрироваться"
 
   tests:
     index:
@@ -97,11 +97,12 @@ ru:
         question: "вопрос"
         answers: "Список ответов:"
         new_answer: "Создать ответ"
-        edit: "Редактировать"
+        edit: "Редактировать вопрос"
         back: "Назад"
         actions: "Действия"
       edit:
-        edit: "Редактировать "
+        edit: "Редактировать вопрос"
+        back: "Назад"
       question:
         show: "Просмотреть"
         edit: "Редактировать"
@@ -118,11 +119,12 @@ ru:
         back: "Назад"
       new:
         new_answer: "Создание ответа"
+        edit: "Назад"
       show:
         question: "Вопрос:"
         answer: "Ответ:"
-        correct: "Корректность:"
         back: "Назад"
+      correct: "Правильный"
     gists:
       index:
         header: "Gist пользователей"

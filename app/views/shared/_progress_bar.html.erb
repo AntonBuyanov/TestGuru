@@ -1,5 +1,5 @@
 <div class="progress">
-  <%= content_tag :div, "Your progress",
+  <%= content_tag :div, "Вопрос #{@test_passage.current_question_number} из #{@test_passage.question_count}",
                   class: "progress-bar progress-bar-striped progress-bar-animated bg-info",
                   role: "progressbar",
                   data: { question_number: @test_passage.current_question_number,

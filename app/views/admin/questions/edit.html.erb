@@ -1,9 +1,8 @@
 <div class="row justify-content-center mt-3">
   <div class="col col-md-4">
-    <h1> <%= t('.edit') %><%= @question.body %> </h1>
-
+    <h1> <%= t('.edit') %> </h1>
     <%= render 'form' %>
 
-    <%= link_to 'Back', admin_test_path(@question.test) %>
+    <%= link_to t('.back'), admin_test_path(@question.test) %>
   </div>
 </div>

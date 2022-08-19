@@ -5,7 +5,7 @@
     <div class="form-group">
       <p>
         <%= form.label :title %><br>
-        <%= form.text_field :title, id: :test_title, class: 'form-control' %>
+        <%= form.text_field :title, id: :test_title, autofocus: true, class: 'form-control' %>
       </p>
 
       <p>
@@ -18,7 +18,7 @@
         <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
       </p>
 
-      <p><%= form.submit t('.new_test'), class: 'btn btn-outline-dark' %></p>
+      <p><%= form.submit t('.new_test'), class: 'btn btn-primary mt-6' %></p>
     <% end %>
     </div>
   </div>
