@@ -11,6 +11,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+        timer: "Таймер(мин)"
 
   users:
     sessions:
@@ -62,6 +63,7 @@ ru:
         new_test: "Создать тест"
         title: "Название"
         level: "Уровень"
+        timer: "Таймер(мин)"
         questions: "Вопросы"
         actions: "Действия"
       show:
@@ -74,6 +76,7 @@ ru:
         delete: "Удалить"
         title: "Название"
         level: "Уровень"
+        timer: "Таймер(мин)"
         sure: "Вы уверены?"
       edit:
         edit_test: "Редактирование"

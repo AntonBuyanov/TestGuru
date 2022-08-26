@@ -35,6 +35,10 @@ class TestPassage < ApplicationRecord
     test.questions.count
   end
 
+  def timer_finish
+    created_at + test.timer.minutes
+  end
+
   private
 
   def set_current_question
@@ -56,4 +60,6 @@ class TestPassage < ApplicationRecord
   def correct_answers
     current_question.answers.correct
   end
+
+
 end
