@@ -12,7 +12,7 @@ class TestPassage < ApplicationRecord
   end
 
   def accept!(answer_ids)
-    if correct_answer?(answer_ids) && !time_out?
+    if correct_answer?(answer_ids) && time_alive?
       self.correct_questions += 1
     end
 
@@ -25,6 +25,10 @@ class TestPassage < ApplicationRecord
 
   def time_out?
     test.timer? && timer_finish.past?
+  end
+
+  def time_alive?
+    !time_out?
   end
 
   def result
