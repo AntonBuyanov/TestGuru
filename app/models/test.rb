@@ -10,6 +10,10 @@ class Test < ApplicationRecord
   scope :medium_level, -> { where(level: 2..4) }
   scope :hard_level, -> { where(level: 5..Float::INFINITY) }
 
+  scope :passed_test, -> { includes(:test_passages).where('success_percent >= ?', TestPassage::SUCCESS_RATE) }
+  scope :by_category, ->(category) { joins(:category).where('categories.title = ?', category) }
+  scope :by_level, ->(level) { where('level = ?', level) }
+
   validates :title, presence: true,
             uniqueness: { scope: :level,
                           message: 'title and level must be unique'}

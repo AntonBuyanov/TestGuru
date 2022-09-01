@@ -12,6 +12,11 @@ ru:
         level: "Уровень"
         category_id: "Категория"
         timer: "Таймер(мин)"
+      badge:
+        title: "Название"
+        rule: "Правило"
+        rule_value: "Значение правила"
+        image: "Изображение"
 
   users:
     sessions:
@@ -38,8 +43,20 @@ ru:
       level: "Уровень"
       questions: "Вопросы"
       actions: "Действия"
+      badge: "Награды"
+      user_badge: "Ваша коллекция"
     test:
       start: "Начать"
+
+  badges:
+    index:
+      badge: "Возможные награды"
+      badge_name: "Награда"
+      image: "Изображение"
+      type: "Тип награды"
+      value: "Значение награды"
+    collection:
+      header: "Ваши достижения"
 
   test_passages:
     result:
@@ -66,6 +83,7 @@ ru:
         timer: "Таймер(мин)"
         questions: "Вопросы"
         actions: "Действия"
+        badge: "Бейджи"
       show:
         new_question: "Создать вопрос"
         back: "Назад"
@@ -138,6 +156,30 @@ ru:
       header: "Добро пожаловать, "
       logout: "Выйти"
       admin_panel: "Админ Панель"
+    badges:
+      form:
+        category: "По категории"
+        first_attempt: "С первой удачной попытки"
+        level: "По уровню"
+      index:
+        name: "Название бейджа"
+        image: "Изображение"
+        rule: "Правило"
+        rule_value: "Значение правила"
+        actions: "Действия"
+        new: "Создать бейдж"
+        badges: "Бейджи"
+      show:
+        edit: "Редактировать"
+        back: "Назад"
+      new:
+        new: "Создание бейджа"
+      create:
+        success: "Бейдж успешно создан"
+      update:
+        success: "Бейдж успешно обновлен"
+      destroy:
+        success: "Бейдж удален"
 
   tests_mailer:
     completed_test:

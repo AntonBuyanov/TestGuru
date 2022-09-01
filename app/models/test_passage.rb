@@ -14,6 +14,7 @@ class TestPassage < ApplicationRecord
   def accept!(answer_ids)
     if correct_answer?(answer_ids) && time_alive?
       self.correct_questions += 1
+      self.success_percent = result
     end
 
     save!
@@ -68,6 +69,4 @@ class TestPassage < ApplicationRecord
   def correct_answers
     current_question.answers.correct
   end
-
-
 end

@@ -2,7 +2,8 @@
   <div class="col col-md-8">
     <h1 class="text-center "><%= t('.header') %></h1>
     <p>
-      <%= link_to t('.new_test'), new_admin_test_path %>
+      <%= link_to t('.new_test'), new_admin_test_path %> |
+      <%= link_to t('.badge'), admin_badges_path %> |
     </p>
 
     <%= render 'shared/errors', resource: @test %>
