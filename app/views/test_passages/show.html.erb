@@ -1,5 +1,9 @@
 <h1><%= t('.passage') %> <%= @test_passage.test.title %> <%= t('.test') %></h1>
 <%= render 'shared/progress_bar' %>
+<% if @test_passage.test.timer %>
+  <%= render 'shared/timer' %>
+<% end %>
+
 <p class="lead">
   <%= @test_passage.current_question.body %>
 </p>

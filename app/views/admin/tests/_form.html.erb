@@ -18,6 +18,11 @@
         <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
       </p>
 
+      <p>
+        <%= form.label :timer %>
+        <%= form.number_field :timer, class: 'form-control' %>
+      </p>
+
       <p><%= form.submit t('.new_test'), class: 'btn btn-primary mt-6' %></p>
     <% end %>
     </div>

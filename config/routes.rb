@@ -11,6 +11,10 @@ Rails.application.routes.draw do
 
   resources :feedbacks, only: %i[new create], shallow: true
 
+  resources :badges, only: %i[index]
+
+  get '/collection', to: 'badges#collection'
+
   resources :test_passages, only: %i[show update] do
     member do
       get :result
@@ -27,5 +31,6 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: :index
+    resources :badges
   end
 end

@@ -1,0 +1,18 @@
+<tr>
+  <td class="align-middle"><%= badge.title %></td>
+  <td class="align-middle"><%= image_tag badge.image %></td>
+  <td class="align-middle"><%= badge.rule %></td>
+  <td class="align-middle"><%= badge.rule_value %></td>
+  <td class="align-middle"><%= link_to 'Просмотреть', admin_badge_path(badge), class: 'btn btn-outline-primary' %></td>
+  <td class="align-middle">
+    <%= link_to 'Редактировать',
+                edit_admin_badge_path(badge),
+                class: 'btn btn-outline-primary form-inline-link' %>
+  </td>
+  <td class="align-middle">
+    <%= link_to 'Удалить',
+                admin_badge_path(badge), class: 'btn btn-outline-primary',
+                method: :delete,
+                data: { confirm: 'Вы уверены?'} %>
+  </td>
+</tr>

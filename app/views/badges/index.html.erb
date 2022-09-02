@@ -1,0 +1,13 @@
+<h2><%= t('.badge') %></h2>
+<%= render 'shared/errors', resource: @badge %>
+
+<table class="table">
+  <tr>
+    <th><%= t('.badge_name') %></th>
+    <th><%= t('.image') %></th>
+    <th><%= t('.type') %></th>
+    <th><%= t('.value') %></th>
+  </tr>
+
+  <%= render @badges %>
+</table>

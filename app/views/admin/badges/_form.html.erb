@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col col-md-6">
+    <%= form_with model: [:admin, @badge] do |f| %>
+      <%= render 'shared/errors', resource: @badge %>
+      <p>
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control', autofocus: true %>
+      </p>
+
+      <p>
+        <%= f.label :image %>
+        <%= f.text_field :image, class: 'form-control' %>
+      </p>
+
+      <p>
+        <%= f.label :rule %>
+        <%= f.select :rule, rule_type, prompt: true %>
+      </p>
+
+      <p>
+        <%= f.label :rule_value %>
+        <%= f.text_field :rule_value, class: 'form-control' %>
+      </p>
+
+      <p><%= f.submit class: 'btn btn-outline-primary' %></p>
+    <% end %>
+  </div>
+</div>
